@@ -20,17 +20,25 @@ using namespace std;
 
 int main(){
   int N;
-  cin >> N;
-  int p[N];
-  F(i, N){
-    cin >> p[i];
+  int result = 0;
+  if(N < 10){
+    result = N;
   }
-  int cnt = 0;
-  FSG(i,1,N-1){
-    if(max(p[i], max(p[i+1], p[i-1])) != p[i] && min(p[i], min(p[i+1], p[i-1])) != p[i]){
-      cnt++;
-    }
+  else if (N < 100){
+    result = 9;
   }
-  cout << cnt << endl;
+  else if (N < 1000){
+    result = 9 + (N-99);
+  }
+  else if (N < 10000){
+    result = 9 + 900;
+  }
+  else if (N < 100000){
+    result = 9 + 900 + (N-9999);
+  }
+  else {
+    result = 90909;
+  }
+  cout << result << endl;
   return 0;
 }

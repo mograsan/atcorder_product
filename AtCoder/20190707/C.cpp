@@ -19,16 +19,25 @@ using namespace std;
 #define VALD(n) cout << #n << ": " << n << endl;
 
 int main(){
-  int N;
-  cin >> N;
-  int p[N];
+  int N, D;
+  cin >> N >> D;
+  int x[N][D];
   F(i, N){
-    cin >> p[i];
+    F(j, D){
+      cin >> x[i][j];
+    }
   }
   int cnt = 0;
-  FSG(i,1,N-1){
-    if(max(p[i], max(p[i+1], p[i-1])) != p[i] && min(p[i], min(p[i+1], p[i-1])) != p[i]){
-      cnt++;
+  F(i, N-1){
+    FSG(j, i+1, N){
+      double dist = 0.0;
+      F(k, D){
+        dist+=(x[i][k] - x[j][k])*(x[i][k] - x[j][k]);
+      }
+      dist = sqrt(dist);
+      if(ceil(dist) == floor(dist)){
+        cnt++;
+      }
     }
   }
   cout << cnt << endl;

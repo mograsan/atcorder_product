@@ -35,7 +35,7 @@ int main(){
   sort(v.rbegin(), v.rend());
   bool nochange = false;
   bool end = false;
-  int sum = 0;
+  lli sum = 0;
   int idx = 0;
   F(i, m){
     pii tmp = v[i];
@@ -44,9 +44,7 @@ int main(){
       while(cnt > 0){
         if(a[idx] < tmp.first){
           idx++;
-          VAL(sum);
           sum+=tmp.first;
-          VAL(sum);
           cnt--;
           if(idx == n){
             break;
@@ -54,7 +52,6 @@ int main(){
         }
         else{
           sum+=a[idx];
-          VAL(a[idx]);
           nochange = true;
           idx++;
           break;
@@ -74,7 +71,6 @@ int main(){
     }
   }
   FSG(i, idx, n){
-    VAL(sum);
     sum+=a[i];
   }
   VAL(sum);

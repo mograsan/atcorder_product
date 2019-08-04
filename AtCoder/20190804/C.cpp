@@ -21,16 +21,32 @@ using namespace std;
 int main(){
   int N;
   cin >> N;
-  int p[N];
-  F(i, N){
-    cin >> p[i];
-  }
+  int h[N];
+  int flag = true;
   int cnt = 0;
-  FSG(i,1,N-1){
-    if(max(p[i], max(p[i+1], p[i-1])) != p[i] && min(p[i], min(p[i+1], p[i-1])) != p[i]){
-      cnt++;
+  F(i,N){
+    cin >> h[i];
+    if(i!=0){
+      if(h[i] < h[i-1]){
+        cnt++;
+      }
+      else{
+        cnt = 0;
+      }
+      if(h[i-1] - h[i] > 1){
+        flag = false;
+      }
+      if(cnt > 1){
+        flag = false;
+      }
     }
   }
-  cout << cnt << endl;
+
+  if(flag){
+    cout << "Yes" << endl;
+  }
+  else{
+    cout << "No" << endl;
+  }
   return 0;
 }

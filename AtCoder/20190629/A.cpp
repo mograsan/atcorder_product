@@ -28,10 +28,9 @@ int main(){
   int cnt1 = 0;
   int cnt2 = 0;
   string c1 = " ";
-  string c2 = "i";
+  string c2 = " ";
   F(i, S.length()){
     string c = s[i];
-    cout << c << endl;
     if(i == 0){
       c1 = c;
       cnt1++;
@@ -40,7 +39,7 @@ int main(){
       if(c1 == c){
         cnt1++;
       }
-      else if (c2 != c && i == 2){
+      else if (c2 != c && c2 == " "){
         c2 = c;
         cnt2++;
       }

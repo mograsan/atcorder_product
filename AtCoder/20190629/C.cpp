@@ -21,7 +21,7 @@ using namespace std;
 int main(){
   int N;
   cin >> N;
-  int a[i];
+  int a[N];
   F(i, N){
     cin >> a[i];
   }

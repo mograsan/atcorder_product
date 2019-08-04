@@ -21,16 +21,31 @@ using namespace std;
 int main(){
   int N;
   cin >> N;
-  int p[N];
+  lli a[N];
+  lli sum = 0;
   F(i, N){
-    cin >> p[i];
+    cin >> a[i];
+    sum += a[i];
   }
-  int cnt = 0;
-  FSG(i,1,N-1){
-    if(max(p[i], max(p[i+1], p[i-1])) != p[i] && min(p[i], min(p[i+1], p[i-1])) != p[i]){
-      cnt++;
+  lli prev = 0;
+  F(i, N){
+    lli result = sum;
+    int idx = (i+1)%N;
+    if(i == 0){
+      F(j, (N-1)/2){
+        result -= 2*a[idx];
+        idx = (idx+2)%N;
+      }
     }
+    else{
+      result = 2*a[i-1] - prev;
+    }
+    cout << result;
+    if(i != N-1){
+      cout << " ";
+    }
+    prev = result;
   }
-  cout << cnt << endl;
+  cout << endl;
   return 0;
 }

@@ -19,18 +19,8 @@ using namespace std;
 #define VALD(n) cout << #n << ": " << n << endl;
 
 int main(){
-  int N;
-  cin >> N;
-  int p[N];
-  F(i, N){
-    cin >> p[i];
-  }
-  int cnt = 0;
-  FSG(i,1,N-1){
-    if(max(p[i], max(p[i+1], p[i-1])) != p[i] && min(p[i], min(p[i+1], p[i-1])) != p[i]){
-      cnt++;
-    }
-  }
-  cout << cnt << endl;
+  int A, B, C;
+  cin >> A >> B >> C;
+  cout << C - (A-B) << endl;
   return 0;
 }

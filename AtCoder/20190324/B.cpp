@@ -27,12 +27,14 @@ int main(){
   }
   int cnt = 0;
   int maxcnt = 0;
-  int start = 0;
-  int maxs = 0;
-  int maxg = 0;
   F(i, S.length()){
     if(s[i] == "A" || s[i] == "T" || s[i] == "G" || s[i] == "C"){
       cnt++;
+      if(i == S.length() - 1){
+        if(maxcnt < cnt){
+          maxcnt = cnt;
+        }
+      }
     }
     else{
       if(maxcnt < cnt){

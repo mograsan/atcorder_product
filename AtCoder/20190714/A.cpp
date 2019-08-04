@@ -21,16 +21,16 @@ using namespace std;
 int main(){
   int N;
   cin >> N;
-  int p[N];
+  int a[N];
+  int all_sum = 0b0;
   F(i, N){
-    cin >> p[i];
+    cin >> a[i];
+    all_sum ^= a[i];
   }
-  int cnt = 0;
-  FSG(i,1,N-1){
-    if(max(p[i], max(p[i+1], p[i-1])) != p[i] && min(p[i], min(p[i+1], p[i-1])) != p[i]){
-      cnt++;
-    }
+  string result = "Yes";
+  if(all_sum != 0b0){
+    result = "No";
   }
-  cout << cnt << endl;
+  cout << result << endl;
   return 0;
 }
