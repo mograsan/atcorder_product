@@ -30,7 +30,7 @@ int main(){
       if(h[i] < h[i-1]){
         cnt++;
       }
-      else{
+      else if (h[i] > h[i-1]){
         cnt = 0;
       }
       if(h[i-1] - h[i] > 1){

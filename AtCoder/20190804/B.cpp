@@ -20,6 +20,7 @@ using namespace std;
 
 int main(){
   int N;
+  cin >> N;
   int result = 0;
   if(N < 10){
     result = N;

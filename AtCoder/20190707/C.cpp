@@ -19,27 +19,14 @@ using namespace std;
 #define VALD(n) cout << #n << ": " << n << endl;
 
 int main(){
-  int N, D;
-  cin >> N >> D;
-  int x[N][D];
-  F(i, N){
-    F(j, D){
-      cin >> x[i][j];
-    }
-  }
-  int cnt = 0;
-  F(i, N-1){
-    FSG(j, i+1, N){
-      double dist = 0.0;
-      F(k, D){
-        dist+=(x[i][k] - x[j][k])*(x[i][k] - x[j][k]);
-      }
-      dist = sqrt(dist);
-      if(ceil(dist) == floor(dist)){
-        cnt++;
-      }
-    }
-  }
-  cout << cnt << endl;
+  lli L, R;
+  cin >> L >> R;
+  lli minv = L*(L+1);
+  lli maxv = R*(R-1);
+  lli minr = minv % 2019;
+  lli maxr = maxv % 2019;
+  lli diff =
+  lli result = 0;
+  if(minr <= )
   return 0;
 }
