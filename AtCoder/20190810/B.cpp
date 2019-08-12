@@ -19,7 +19,12 @@ using namespace std;
 #define VALD(n) cout << #n << ": " << n << endl;
 
 int main(){
-  int N;
-  cin >> N;
+  int K, X;
+  cin >> K >> X;
+  int min = X-K+1;
+  F(i, 2*K-1){
+    cout << min + i << " ";
+  }
+  cout << endl;
   return 0;
 }

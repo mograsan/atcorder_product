@@ -5,6 +5,7 @@
 #include <vector>
 #include <tuple>
 #include <algorithm>
+#include <stdlib.h>
 using namespace std;
 #define lli long long int
 #define vi vector<int>
@@ -18,8 +19,33 @@ using namespace std;
 #define VAL(n) cout << n << endl;
 #define VALD(n) cout << #n << ": " << n << endl;
 
+int comp(const string *a, const string *b){
+  if (*a < *b)
+        return (-1);
+    else if (*a > *b)
+        return (1);
+    return (0);
+}
+
 int main(){
   int N;
   cin >> N;
+  string s[N];
+
+  F(i, N){
+    string st;
+    cin >> st;
+    vector<string> vec;
+    for(int j = 0; j < 10; j++){
+      vector = st.substr(j, 1);
+    }
+    string tmps;
+    tmps = tmp[0];
+    FSG(j, 1, 10){
+      tmps = tmps + tmp[j];
+    }
+    s[i] = tmps;
+    cout << s[i] << endl;
+  }
   return 0;
 }

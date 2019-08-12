@@ -19,7 +19,8 @@ using namespace std;
 #define VALD(n) cout << #n << ": " << n << endl;
 
 int main(){
-  int N;
-  cin >> N;
+  int A, B;
+  cin >> A >> B;
+  cout << max(A + B, max(A-B, A*B)) << endl;
   return 0;
 }
