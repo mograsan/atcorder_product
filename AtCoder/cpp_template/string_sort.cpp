@@ -1,12 +1,10 @@
-// #include <iostream>
-// #include <string>
-// #include <math.h>
-// #include <map>
-// #include <vector>
-// #include <tuple>
-// #include <algorithm>
-// #include <queue>
-#include<bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <map>
+#include <vector>
+#include <tuple>
+#include <algorithm>
 using namespace std;
 #define lli long long int
 #define vi vector<int>
@@ -19,12 +17,11 @@ using namespace std;
 #define FSGR(i,a,b) for(lli (i)=(b)-1;(i)>=(a);(i)--)
 #define VAL(n) cout << n << endl;
 #define VALD(n) cout << #n << ": " << n << endl;
-void remove(std::vector<T>& vector, unsigned int index)
-{
-    vector.erase(vector.begin() + index);
-}
+
 int main(){
-  int N;
-  cin >> N;
+  string s = "acrigmqpoe";
+  cout << s <<endl;
+  sort(s.begin(), s.end());
+  cout << s << endl;
   return 0;
 }
