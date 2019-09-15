@@ -64,7 +64,7 @@ int main(){
   }
   cout << endl;
 
-  auto c = [](plli ai,plli bi){return ai.second > bi.second;};
+  auto c = [](plli ai,plli bi){return ai.second > bi.second;}; // reverse: ai.second < bi.second
   cout << "=== (int, int) priority queue ===" << endl;
   priority_queue<lli, vector<plli>, decltype(c)> pqp(c);
   pqp.push(make_pair(1,2));
